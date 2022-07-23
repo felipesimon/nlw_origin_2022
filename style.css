@@ -37,7 +37,7 @@ body {
   font-family: "DM Sans", sans-serif;
   font-size: 1.6rem;
   color: var(--primary-light);
-  overflow: overlay;
+  /* overflow: overlay; */
   background-color: var(--bg-light);
 }
 
@@ -303,12 +303,12 @@ body.menu-expanded .logo path {
   padding-block: 0;
   padding-top: calc(4.1rem + var(--nav-height));
   }
-}
+
 
 #home p {
   font-size: 1.8rem;
   color: var(--secondary-dark-paragraph);
-  margin-bottom: 3.2rem;
+  padding-bottom: 3.2rem;
   line-height: 150%;
 }
 
@@ -351,9 +351,7 @@ body.menu-expanded .logo path {
 }
 
 /* ================== SERVICES =================== */
-#services {
-  margin-bottom: 10rem;
-}
+
 
 #services header h2 {
   margin-bottom: 6rem;
@@ -409,9 +407,6 @@ body.menu-expanded .logo path {
   margin: 2.4rem 0 6rem;
 }
 
-#about img {
-  margin-bottom: 10rem;
-}
 
 /* ========================= CONTACT ========= */
 #contact {
