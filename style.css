@@ -468,7 +468,7 @@ footer .logo path {
   fill: white;
 }
 
-footer p {
+footer .col-a p:nth-child(2) {
   margin-bottom: 1.2rem;
 }
 
@@ -508,8 +508,21 @@ footer .socialLinks {
     display: grid;
   }
 
+  .col-a {
+    grid-area: A;
+  }
+
+  .col-b {
+    grid-area: B;
+  }
+
   section {
     padding-block: 16rem;
+  }
+
+  section .wrapper h2 {
+    font-size: 4rem;
+    line-height: 5.2rem;
   }
 /*===== NAVIGATION ======*/
   /* RESET */
@@ -641,13 +654,8 @@ footer .socialLinks {
   }
 
   #home .col-a {
-    grid-area: A;
     text-align: left;
     align-self: center;
-  }
-
-  #home .col-b {
-    grid-area: B;
   }
 
   #home h1 {
@@ -682,5 +690,76 @@ footer .socialLinks {
 
   }
 
+/*======= SERVICES ===============*/
+  #services h2 {
+    width: 49.7rem;
+    margin: 0 auto;
+  }
+
+  #services .cards {
+    flex-flow: row wrap;
+    gap: 4rem;
+  }
+
+  #services .card {
+    width: 30%;
+    flex-grow: 1;
+  }
+
+  /*======= ABOUT ===============*/
+  #about .wrapper {
+    grid-template-columns: 48rem 1fr;
+    grid-template-areas: 'B A';
+    gap: 6.47rem;
+  }
+
+  #about .col-a {
+    align-self: center;
+  }
+
+  #about .content p {
+    margin-bottom: 0;
+
+  }
+
+  /*======= CONTACT ===============*/
+  #contact h2 {
+    width: 40.4rem;
+  }
+  
+  #contact .wrapper {
+    grid-template-columns: 1fr 57.5rem;
+    grid-template-areas: 'A B';
+    gap: 14.1rem;
+    padding:6rem 0;
+  }
+
+  #contact .col-a {
+    align-self: center;
+  }
+
+/*======= FOOTER ===============*/
+footer {
+  padding: 8rem 0;
+}
+
+footer .wrapper {
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'A B';
+  
+}
+
+footer .col-a {
+  align-self: center;
+}
+
+footer .col-b {
+  align-self: center;
+  justify-self: flex-end;
+}
+
+footer .col-b ul {
+  padding-top: 0;
+}
 
 }
