@@ -581,10 +581,6 @@ footer .socialLinks {
     border-radius: 40px;
   }
   
-  nav#navBar .menu a.button:hover {
-    background-color: var(--primary-light);
-    color: white;
-  }
 
   nav#navBar.scroll .menu a.button:hover {
    border: none;
@@ -609,7 +605,7 @@ footer .socialLinks {
     font-weight: 700;
   }
 
-  nav#navBar .menu li a::after {
+  nav#navBar .menu ul li a::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -623,17 +619,25 @@ footer .socialLinks {
     transition: width 0.2s;
   }
 
-  nav#navBar.scroll .menu li a::after{
+  nav#navBar.scroll .menu ul li a::after{
     background-color: white;
   }
 
-  nav#navBar .menu li a:hover::after {
+  nav#navBar .menu ul li a.active::after,
+  nav#navBar .menu ul li a:hover::after {
     padding: 0 1rem;
     width: 100%;
   }
 
+  nav#navBar .menu ul li a.active,
   nav#navBar.scroll .menu li a:hover {
     opacity: 1;
+  }
+
+  nav#navBar .menu ul li a.button.active,
+  nav#navBar .menu a.button:hover {
+    background-color: var(--primary-light);
+    color: white;
   }
 
   /*======= HOME ======*/
@@ -723,6 +727,10 @@ footer .socialLinks {
   }
 
   /*======= CONTACT ===============*/
+  #contact {  
+    padding: 16rem 0 20rem;
+  }
+
   #contact h2 {
     width: 40.4rem;
   }
@@ -731,7 +739,7 @@ footer .socialLinks {
     grid-template-columns: 1fr 57.5rem;
     grid-template-areas: 'A B';
     gap: 14.1rem;
-    padding:6rem 0;
+    
   }
 
   #contact .col-a {
